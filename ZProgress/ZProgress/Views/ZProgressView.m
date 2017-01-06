@@ -63,7 +63,8 @@
     
         [self.animationTimer invalidate];
         self.animationTimer = nil;
-        self.countNumber = self.shapeLayer.strokeEnd;
+        self.shapeLayer.strokeStart = self.strokeStart;
+        self.countNumber = self.strokeStart;
         self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(startAction:) userInfo:nil repeats:YES];
         return;
         
@@ -82,7 +83,8 @@
     
         [self.animationTimer invalidate];
         self.animationTimer = nil;
-        self.countNumber = self.shapeLayer.strokeEnd;
+        self.shapeLayer.strokeStart = self.strokeStart;
+        self.countNumber = self.strokeEnd;
         self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(clearAction:) userInfo:nil repeats:YES];
         return;
         
@@ -127,7 +129,7 @@
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:self.circleFrame];
     self.shapeLayer.path = path.CGPath;
     self.shapeLayer.strokeStart = 0;
-    self.shapeLayer.strokeEnd = 0.1;
+    self.shapeLayer.strokeEnd = 0.0;
     
 }
 
@@ -135,9 +137,9 @@
 
 - (void)startAction:(NSTimer *)timer {
 
-    if(self.countNumber >= 1) {
+    if(self.countNumber >= self.strokeEnd) {
     
-        self.shapeLayer.strokeEnd = 1;
+        self.shapeLayer.strokeEnd = self.strokeEnd;
         [self.animationTimer invalidate];
         self.animationTimer = nil;
         return;
@@ -151,9 +153,9 @@
 
 - (void)clearAction:(NSTimer *)timer {
 
-    if(self.countNumber <= 0) {
+    if(self.countNumber <= self.strokeStart) {
     
-        self.shapeLayer.strokeEnd = 0;
+        self.shapeLayer.strokeEnd = self.strokeStart;
         [self.animationTimer invalidate];
         self.animationTimer = nil;
         return;
