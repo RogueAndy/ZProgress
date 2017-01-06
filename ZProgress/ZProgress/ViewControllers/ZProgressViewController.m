@@ -1,0 +1,67 @@
+//
+//  ZProgressViewController.m
+//  ZProgress
+//
+//  Created by dazhongge on 2017/1/6.
+//  Copyright © 2017年 dazhongge. All rights reserved.
+//
+
+#import "ZProgressViewController.h"
+#import "ZProgressView.h"
+
+@interface ZProgressViewController ()
+
+@property (nonatomic, strong) ZProgressView *z1;
+
+@property (nonatomic, assign) BOOL change;
+
+@end
+
+@implementation ZProgressViewController
+
+- (void)loadViews {
+
+    [super loadViews];
+    
+//    self.z1 = [[ZProgressView alloc] initWithFrame:CGRectMake(0, 0, 200, 200) circleFrame:CGRectMake(0, 0, 160, 160)];
+    self.z1 = [[ZProgressView alloc] init];
+    [self.view addSubview:self.z1];
+    
+    UIButton *start = [UIButton buttonWithType:UIButtonTypeCustom];
+    [start addTarget:self action:@selector(startAction:) forControlEvents:UIControlEventTouchUpInside];
+    start.backgroundColor = [UIColor orangeColor];
+    start.frame = CGRectMake(75, 80, self.view.frame.size.width - 150, 35);
+    [self.view addSubview:start];
+    
+    UIButton *clear = [UIButton buttonWithType:UIButtonTypeCustom];
+    [clear addTarget:self action:@selector(clearAction:) forControlEvents:UIControlEventTouchUpInside];
+    clear.backgroundColor = [UIColor redColor];
+    clear.frame = CGRectMake(75, 120, self.view.frame.size.width - 150, 35);
+    [self.view addSubview:clear];
+    
+
+    
+}
+
+- (void)loadLayout {
+
+    [super loadLayout];
+    self.z1.frame = CGRectMake(0, 0, 300, 300);
+    self.z1.circleFrame = CGRectMake(0, 0, 300, 300);
+    self.z1.center = self.view.center;
+    
+}
+
+- (void)startAction:(UIButton *)sender {
+
+    self.z1.startAnimation = YES;
+
+}
+
+- (void)clearAction:(UIButton *)sender {
+
+    self.z1.clearAnimation = YES;
+
+}
+
+@end
