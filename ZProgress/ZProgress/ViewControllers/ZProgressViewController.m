@@ -23,11 +23,12 @@
 
     [super loadViews];
     
-//    self.z1 = [[ZProgressView alloc] initWithFrame:CGRectMake(0, 0, 200, 200) circleFrame:CGRectMake(0, 0, 160, 160)];
-    self.z1 = [[ZProgressView alloc] init];
+    self.z1 = [[ZProgressView alloc] initWithFrame:CGRectMake(0, 0, 200, 200) circleFrame:CGRectMake(0, 0, 160, 160) strokeColor:[UIColor orangeColor] animationType:ZSlow];
+//    self.z1 = [[ZProgressView alloc] init];
     self.z1.strokeStart = 0.1;
     self.z1.strokeEnd = 0.9;
-    self.z1.strokeColor = [UIColor orangeColor];
+//    self.z1.strokeColor = [UIColor orangeColor];
+//    self.z1.animationType = ZSlow;
     [self.view addSubview:self.z1];
     
     UIButton *start = [UIButton buttonWithType:UIButtonTypeCustom];

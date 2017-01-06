@@ -16,14 +16,25 @@
 
 @property (nonatomic) CGFloat countNumber;
 
+/**
+ 每隔 多少时间 执行 timer 循环方法
+ */
+@property (nonatomic) CGFloat timerSecond;
+
+/**
+ 执行 timer 循环方法时，每次增加的 countNumber 的大小
+ */
+@property (nonatomic) CGFloat strokeProgressCount;
+
 @end
 
 @implementation ZProgressView
 
-- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor {
+- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor animationType:(ZAnimationType)type {
 
     if(self = [super initWithFrame:frame]) {
     
+        self.animationType = type;
         self.circleFrame = circleFrame;
         self.strokeColor = strokeColor;
         [self loadInit];
@@ -66,7 +77,7 @@
         self.animationTimer = nil;
         self.shapeLayer.strokeStart = self.strokeStart;
         self.countNumber = self.strokeStart;
-        self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(startAction:) userInfo:nil repeats:YES];
+        self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:self.timerSecond target:self selector:@selector(startAction:) userInfo:nil repeats:YES];
         return;
         
     }
@@ -86,7 +97,7 @@
         [self.animationTimer invalidate];
         self.animationTimer = nil;
         self.countNumber = self.strokeEnd;
-        self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(clearAction:) userInfo:nil repeats:YES];
+        self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:self.timerSecond target:self selector:@selector(clearAction:) userInfo:nil repeats:YES];
         return;
         
     }
@@ -99,6 +110,42 @@
 
     _strokeColor = strokeColor;
     self.shapeLayer.strokeColor = [self.strokeColor CGColor];
+
+}
+
+- (void)setAnimationType:(ZAnimationType)animationType {
+
+    _animationType = animationType;
+    
+    switch (_animationType) {
+        case ZQuickly:
+        {
+            
+            self.strokeProgressCount = 0.03;
+            self.timerSecond = 0.005;
+        
+        }
+            break;
+            
+        case ZCommon:
+        {
+            
+            self.strokeProgressCount = 0.01;
+            self.timerSecond = 0.005;
+            
+        }
+            break;
+            
+        case ZSlow:
+        {
+            
+            self.strokeProgressCount = 0.001;
+            self.timerSecond = 0.005;
+            
+        }
+            break;
+            
+    }
 
 }
 
@@ -155,7 +202,7 @@
     }
     
     self.shapeLayer.strokeEnd = self.countNumber;
-    self.countNumber += 0.001;
+    self.countNumber += self.strokeProgressCount;
 
 }
 
@@ -171,7 +218,7 @@
     }
     
     self.shapeLayer.strokeEnd = self.countNumber;
-    self.countNumber -= 0.001;
+    self.countNumber -= self.strokeProgressCount;
 
 }
 

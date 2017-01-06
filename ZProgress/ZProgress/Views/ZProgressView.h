@@ -8,7 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 动画效果的快慢类型
+
+ - ZQuickly: 较快的动画速度
+ - ZCommon: 普通的动画速度
+ - ZSlow: 较慢的动画速度
+ */
+typedef NS_ENUM(NSInteger, ZAnimationType) {
+
+    ZQuickly = 0,
+    ZCommon  = 1,
+    ZSlow    = 2
+
+};
+
 @interface ZProgressView : UIView
+
+/**
+ 动画效果的快慢类型
+ */
+@property (nonatomic) ZAnimationType animationType;
 
 /**
  设置环形动画填充需要的颜色
@@ -46,8 +66,9 @@
  @param frame 当前view的frame大小
  @param circleFrame 进度条的大小
  @param strokeColor 填充进度条的颜色
+ @param type 动画效果的速度
  @return 对象
  */
-- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor;
+- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor animationType:(ZAnimationType)type;
 
 @end
