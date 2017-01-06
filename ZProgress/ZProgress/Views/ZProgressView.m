@@ -20,11 +20,12 @@
 
 @implementation ZProgressView
 
-- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame {
+- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor {
 
     if(self = [super initWithFrame:frame]) {
     
         self.circleFrame = circleFrame;
+        self.strokeColor = strokeColor;
         [self loadInit];
         [self loadViews];
         [self loadLayout];
@@ -79,18 +80,25 @@
 - (void)setClearAnimation:(BOOL)clearAnimation {
 
     _clearAnimation = clearAnimation;
+    self.shapeLayer.strokeStart = self.strokeStart;
     if(_clearAnimation) {
     
         [self.animationTimer invalidate];
         self.animationTimer = nil;
-        self.shapeLayer.strokeStart = self.strokeStart;
         self.countNumber = self.strokeEnd;
         self.animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.005 target:self selector:@selector(clearAction:) userInfo:nil repeats:YES];
         return;
         
     }
     
-    self.shapeLayer.strokeEnd = 0;
+    self.shapeLayer.strokeEnd = self.strokeEnd;
+
+}
+
+- (void)setStrokeColor:(UIColor *)strokeColor {
+
+    _strokeColor = strokeColor;
+    self.shapeLayer.strokeColor = [self.strokeColor CGColor];
 
 }
 
@@ -105,11 +113,13 @@
     self.shapeLayer = [CAShapeLayer layer];
     self.shapeLayer.fillColor = [[UIColor clearColor] CGColor];
     self.shapeLayer.lineWidth = 75.f;
-    self.shapeLayer.strokeColor = [[UIColor blueColor] CGColor];
+    self.shapeLayer.strokeColor = [self.strokeColor CGColor];
     
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:self.circleFrame];
     self.shapeLayer.path = path.CGPath;
     [self.layer addSublayer:self.shapeLayer];
+    self.shapeLayer.strokeStart = 0;
+    self.shapeLayer.strokeEnd = 0.0;
     
 }
 
@@ -128,8 +138,6 @@
     [self loadLayout];
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:self.circleFrame];
     self.shapeLayer.path = path.CGPath;
-    self.shapeLayer.strokeStart = 0;
-    self.shapeLayer.strokeEnd = 0.0;
     
 }
 

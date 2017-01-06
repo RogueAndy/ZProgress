@@ -27,6 +27,7 @@
     self.z1 = [[ZProgressView alloc] init];
     self.z1.strokeStart = 0.1;
     self.z1.strokeEnd = 0.9;
+    self.z1.strokeColor = [UIColor orangeColor];
     [self.view addSubview:self.z1];
     
     UIButton *start = [UIButton buttonWithType:UIButtonTypeCustom];

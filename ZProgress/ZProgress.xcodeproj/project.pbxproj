@@ -16,7 +16,6 @@
 		AB8CC9C81E1F2999005D5C88 /* ZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9B71E1F2999005D5C88 /* ZBaseViewController.m */; };
 		AB8CC9CD1E1F2999005D5C88 /* ZBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9C31E1F2999005D5C88 /* ZBaseTableViewCell.m */; };
 		AB8CC9CE1E1F2999005D5C88 /* ZBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9C51E1F2999005D5C88 /* ZBaseView.m */; };
-		AB8CC9CF1E1F2999005D5C88 /* ZSideLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9C71E1F2999005D5C88 /* ZSideLeftCell.m */; };
 		AB8CC9D21E1F2A16005D5C88 /* ZProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9D11E1F2A16005D5C88 /* ZProgressViewController.m */; };
 		AB8CC9D51E1F2A4C005D5C88 /* ZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9D41E1F2A4C005D5C88 /* ZProgressView.m */; };
 /* End PBXBuildFile section */
@@ -38,8 +37,6 @@
 		AB8CC9C31E1F2999005D5C88 /* ZBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBaseTableViewCell.m; sourceTree = "<group>"; };
 		AB8CC9C41E1F2999005D5C88 /* ZBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBaseView.h; sourceTree = "<group>"; };
 		AB8CC9C51E1F2999005D5C88 /* ZBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBaseView.m; sourceTree = "<group>"; };
-		AB8CC9C61E1F2999005D5C88 /* ZSideLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSideLeftCell.h; sourceTree = "<group>"; };
-		AB8CC9C71E1F2999005D5C88 /* ZSideLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSideLeftCell.m; sourceTree = "<group>"; };
 		AB8CC9D01E1F2A16005D5C88 /* ZProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProgressViewController.h; sourceTree = "<group>"; };
 		AB8CC9D11E1F2A16005D5C88 /* ZProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZProgressViewController.m; sourceTree = "<group>"; };
 		AB8CC9D31E1F2A4C005D5C88 /* ZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProgressView.h; sourceTree = "<group>"; };
@@ -122,8 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				AB8CC9C11E1F2999005D5C88 /* BaseViews */,
-				AB8CC9C61E1F2999005D5C88 /* ZSideLeftCell.h */,
-				AB8CC9C71E1F2999005D5C88 /* ZSideLeftCell.m */,
 				AB8CC9D31E1F2A4C005D5C88 /* ZProgressView.h */,
 				AB8CC9D41E1F2A4C005D5C88 /* ZProgressView.m */,
 			);
@@ -217,7 +212,6 @@
 				AB8CC9CE1E1F2999005D5C88 /* ZBaseView.m in Sources */,
 				AB8CC9D21E1F2A16005D5C88 /* ZProgressViewController.m in Sources */,
 				AB8CC9D51E1F2A4C005D5C88 /* ZProgressView.m in Sources */,
-				AB8CC9CF1E1F2999005D5C88 /* ZSideLeftCell.m in Sources */,
 				AB8CC9A51E1F2964005D5C88 /* ViewController.m in Sources */,
 				AB8CC9CD1E1F2999005D5C88 /* ZBaseTableViewCell.m in Sources */,
 				AB8CC9A21E1F2964005D5C88 /* AppDelegate.m in Sources */,
@@ -343,6 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZBB923YFHM;
 				INFOPLIST_FILE = ZProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rogue.zlj.ZProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZBB923YFHM;
 				INFOPLIST_FILE = ZProgress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rogue.zlj.ZProgress;
 				PRODUCT_NAME = "$(TARGET_NAME)";

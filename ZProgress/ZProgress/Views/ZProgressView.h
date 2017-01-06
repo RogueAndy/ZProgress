@@ -10,6 +10,10 @@
 
 @interface ZProgressView : UIView
 
+/**
+ 设置环形动画填充需要的颜色
+ */
+@property (nonatomic, strong) UIColor *strokeColor;
 
 /**
  设置圆形进度条的大小
@@ -41,8 +45,9 @@
 
  @param frame 当前view的frame大小
  @param circleFrame 进度条的大小
+ @param strokeColor 填充进度条的颜色
  @return 对象
  */
-- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame;
+- (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor;
 
 @end
