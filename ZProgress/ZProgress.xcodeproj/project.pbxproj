@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8209AC721E76798C0014EF65 /* zprogress.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8209AC711E76798C0014EF65 /* zprogress.gif */; };
-		825A403E1E839B8800C8E9E1 /* ZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A403D1E839B8800C8E9E1 /* ZProgressView.m */; };
+		825A40421E83A4AD00C8E9E1 /* ZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A40411E83A4AD00C8E9E1 /* ZProgressView.m */; };
 		AB8CC99F1E1F2964005D5C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC99E1E1F2964005D5C88 /* main.m */; };
 		AB8CC9A21E1F2964005D5C88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9A11E1F2964005D5C88 /* AppDelegate.m */; };
 		AB8CC9A51E1F2964005D5C88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9A41E1F2964005D5C88 /* ViewController.m */; };
@@ -23,8 +23,8 @@
 
 /* Begin PBXFileReference section */
 		8209AC711E76798C0014EF65 /* zprogress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zprogress.gif; sourceTree = "<group>"; };
-		825A403C1E839B8800C8E9E1 /* ZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProgressView.h; sourceTree = "<group>"; };
-		825A403D1E839B8800C8E9E1 /* ZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZProgressView.m; sourceTree = "<group>"; };
+		825A40401E83A4AD00C8E9E1 /* ZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProgressView.h; sourceTree = "<group>"; };
+		825A40411E83A4AD00C8E9E1 /* ZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZProgressView.m; sourceTree = "<group>"; };
 		AB8CC99A1E1F2964005D5C88 /* ZProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8CC99E1E1F2964005D5C88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB8CC9A01E1F2964005D5C88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,14 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		825A403B1E839B8800C8E9E1 /* ZProgressView */ = {
+		825A403F1E83A4AD00C8E9E1 /* ZRProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				825A403C1E839B8800C8E9E1 /* ZProgressView.h */,
-				825A403D1E839B8800C8E9E1 /* ZProgressView.m */,
+				825A40401E83A4AD00C8E9E1 /* ZProgressView.h */,
+				825A40411E83A4AD00C8E9E1 /* ZProgressView.m */,
 			);
-			name = ZProgressView;
-			path = ../../ZProgressView;
+			name = ZRProgressView;
+			path = ../../ZRProgressView;
 			sourceTree = "<group>";
 		};
 		AB8CC9911E1F2964005D5C88 = {
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				8209AC711E76798C0014EF65 /* zprogress.gif */,
-				825A403B1E839B8800C8E9E1 /* ZProgressView */,
+				825A403F1E83A4AD00C8E9E1 /* ZRProgressView */,
 				AB8CC9B41E1F2999005D5C88 /* ViewControllers */,
 				AB8CC9C01E1F2999005D5C88 /* Views */,
 				AB8CC9A01E1F2964005D5C88 /* AppDelegate.h */,
@@ -225,7 +225,7 @@
 				AB8CC9CE1E1F2999005D5C88 /* ZBaseView.m in Sources */,
 				AB8CC9D21E1F2A16005D5C88 /* ZProgressViewController.m in Sources */,
 				AB8CC9A51E1F2964005D5C88 /* ViewController.m in Sources */,
-				825A403E1E839B8800C8E9E1 /* ZProgressView.m in Sources */,
+				825A40421E83A4AD00C8E9E1 /* ZProgressView.m in Sources */,
 				AB8CC9CD1E1F2999005D5C88 /* ZBaseTableViewCell.m in Sources */,
 				AB8CC9A21E1F2964005D5C88 /* AppDelegate.m in Sources */,
 				AB8CC99F1E1F2964005D5C88 /* main.m in Sources */,
