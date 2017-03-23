@@ -71,4 +71,12 @@ typedef NS_ENUM(NSInteger, ZAnimationType) {
  */
 - (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor animationType:(ZAnimationType)type;
 
+
+
+
+/**
+ 控制当前的完成的百分比
+ */
+@property (nonatomic) CGFloat controlProgress;
+
 @end

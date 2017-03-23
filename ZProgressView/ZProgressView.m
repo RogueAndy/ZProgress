@@ -149,6 +149,16 @@
 
 }
 
+- (void)setControlProgress:(CGFloat)controlProgress {
+
+    _controlProgress = controlProgress;
+    self.strokeStart = 0.0;
+    self.strokeEnd = _controlProgress;
+    self.shapeLayer.strokeStart = 0.0;
+    self.shapeLayer.strokeEnd = _controlProgress;
+
+}
+
 - (void)loadInit {
 
     

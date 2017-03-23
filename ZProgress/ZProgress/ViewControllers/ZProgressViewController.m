@@ -15,6 +15,8 @@
 
 @property (nonatomic, assign) BOOL change;
 
+@property (nonatomic, strong) NSTimer *testTime;
+
 @end
 
 @implementation ZProgressViewController
@@ -58,13 +60,32 @@
 
 - (void)startAction:(UIButton *)sender {
 
-    self.z1.startAnimation = YES;
+//    self.z1.startAnimation = YES;
+    self.testTime = [NSTimer scheduledTimerWithTimeInterval:0.01
+                                                     target:self
+                                                   selector:@selector(changesome)
+                                                   userInfo:nil
+                                                    repeats:YES];
 
 }
 
 - (void)clearAction:(UIButton *)sender {
 
     self.z1.clearAnimation = YES;
+
+}
+
+- (void)changesome {
+
+    if(self.z1.controlProgress > 0.5) {
+    
+        [self.testTime invalidate];
+        self.testTime = nil;
+        return;
+    
+    }
+    
+    self.z1.controlProgress += 0.01;
 
 }
 
