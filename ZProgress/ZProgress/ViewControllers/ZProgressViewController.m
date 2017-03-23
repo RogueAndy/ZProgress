@@ -66,7 +66,6 @@
                                                    selector:@selector(changesome)
                                                    userInfo:nil
                                                     repeats:YES];
-
 }
 
 - (void)clearAction:(UIButton *)sender {
