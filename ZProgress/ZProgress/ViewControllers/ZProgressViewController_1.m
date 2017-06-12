@@ -19,9 +19,8 @@
 
 - (void)loadViews {
 
-    _pro = [ZProgressButton initWithFrame:CGRectMake(0, 0, 200, 200) circleFrame:CGRectMake(0, 0, 184, 184) strokeColor:[UIColor orangeColor] duration:20];
+    _pro = [ZProgressButton initWithFrame:CGRectMake(0, 0, 200, 200) circleFrame:CGRectMake(0, 0, 184, 184) strokeColor:[UIColor greenColor] backgroundColor:[UIColor grayColor] duration:15];
     _pro.center = CGPointMake(CGRectGetWidth(self.view.frame) / 2.0, CGRectGetHeight(self.view.frame) / 2.0 - 80);
-    _pro.backgroundColor = [UIColor grayColor];
     [self.view addSubview:_pro];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];

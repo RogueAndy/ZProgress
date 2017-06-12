@@ -10,7 +10,7 @@
 
 @interface ZProgressButton : UIButton
 
-+ (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor duration:(CGFloat)duration;
++ (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor backgroundColor:(UIColor *)backgroundColor duration:(CGFloat)duration;
 
 - (void)beginAnimation;
 

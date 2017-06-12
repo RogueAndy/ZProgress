@@ -22,11 +22,12 @@
 
 @implementation ZProgressButton
 
-+ (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor duration:(CGFloat)duration {
++ (instancetype)initWithFrame:(CGRect)frame circleFrame:(CGRect)circleFrame strokeColor:(UIColor *)strokeColor backgroundColor:(UIColor *)backgroundColor duration:(CGFloat)duration {
 
     ZProgressButton *button = [ZProgressButton buttonWithType:UIButtonTypeCustom];
-    button.strokeColor = strokeColor;
+    button.backgroundColor = backgroundColor;
     button.frame = frame;
+    button.strokeColor = strokeColor;
     button.circleFrame = circleFrame;
     button.animationDuration = duration;
     [button loadViews];
