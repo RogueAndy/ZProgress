@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ZProgressViewController.h"
+#import "ZProgressViewController_1.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ZProgressViewController *vc = [[ZProgressViewController alloc] init];
+    ZProgressViewController_1 *vc = [[ZProgressViewController_1 alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];

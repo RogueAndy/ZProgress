@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8209AC721E76798C0014EF65 /* zprogress.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8209AC711E76798C0014EF65 /* zprogress.gif */; };
 		825A40421E83A4AD00C8E9E1 /* ZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 825A40411E83A4AD00C8E9E1 /* ZProgressView.m */; };
+		82CBB9601EEE79F8004898FE /* ZProgressButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB95F1EEE79F8004898FE /* ZProgressButton.m */; };
+		82CBB9631EEE8220004898FE /* ZProgressViewController_1.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CBB9621EEE8220004898FE /* ZProgressViewController_1.m */; };
 		AB8CC99F1E1F2964005D5C88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC99E1E1F2964005D5C88 /* main.m */; };
 		AB8CC9A21E1F2964005D5C88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9A11E1F2964005D5C88 /* AppDelegate.m */; };
 		AB8CC9A51E1F2964005D5C88 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8CC9A41E1F2964005D5C88 /* ViewController.m */; };
@@ -25,6 +27,10 @@
 		8209AC711E76798C0014EF65 /* zprogress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zprogress.gif; sourceTree = "<group>"; };
 		825A40401E83A4AD00C8E9E1 /* ZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProgressView.h; sourceTree = "<group>"; };
 		825A40411E83A4AD00C8E9E1 /* ZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZProgressView.m; sourceTree = "<group>"; };
+		82CBB95E1EEE79F8004898FE /* ZProgressButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProgressButton.h; sourceTree = "<group>"; };
+		82CBB95F1EEE79F8004898FE /* ZProgressButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZProgressButton.m; sourceTree = "<group>"; };
+		82CBB9611EEE8220004898FE /* ZProgressViewController_1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZProgressViewController_1.h; sourceTree = "<group>"; };
+		82CBB9621EEE8220004898FE /* ZProgressViewController_1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZProgressViewController_1.m; sourceTree = "<group>"; };
 		AB8CC99A1E1F2964005D5C88 /* ZProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8CC99E1E1F2964005D5C88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AB8CC9A01E1F2964005D5C88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +67,8 @@
 			children = (
 				825A40401E83A4AD00C8E9E1 /* ZProgressView.h */,
 				825A40411E83A4AD00C8E9E1 /* ZProgressView.m */,
+				82CBB95E1EEE79F8004898FE /* ZProgressButton.h */,
+				82CBB95F1EEE79F8004898FE /* ZProgressButton.m */,
 			);
 			name = ZRProgressView;
 			path = ../../ZRProgressView;
@@ -116,6 +124,8 @@
 				AB8CC9B51E1F2999005D5C88 /* BaseViewControllers */,
 				AB8CC9D01E1F2A16005D5C88 /* ZProgressViewController.h */,
 				AB8CC9D11E1F2A16005D5C88 /* ZProgressViewController.m */,
+				82CBB9611EEE8220004898FE /* ZProgressViewController_1.h */,
+				82CBB9621EEE8220004898FE /* ZProgressViewController_1.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,8 +235,10 @@
 				AB8CC9CE1E1F2999005D5C88 /* ZBaseView.m in Sources */,
 				AB8CC9D21E1F2A16005D5C88 /* ZProgressViewController.m in Sources */,
 				AB8CC9A51E1F2964005D5C88 /* ViewController.m in Sources */,
+				82CBB9631EEE8220004898FE /* ZProgressViewController_1.m in Sources */,
 				825A40421E83A4AD00C8E9E1 /* ZProgressView.m in Sources */,
 				AB8CC9CD1E1F2999005D5C88 /* ZBaseTableViewCell.m in Sources */,
+				82CBB9601EEE79F8004898FE /* ZProgressButton.m in Sources */,
 				AB8CC9A21E1F2964005D5C88 /* AppDelegate.m in Sources */,
 				AB8CC99F1E1F2964005D5C88 /* main.m in Sources */,
 			);
